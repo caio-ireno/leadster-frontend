@@ -1,6 +1,6 @@
 .main {
   display: flex;
-  background-color: #eff7ff;
+  background-color: var(--cor-blue-100);
   width: 100%;
   flex-direction: column;
   justify-content: center;
@@ -18,18 +18,19 @@
 }
 
 .info {
+  font-size: 1rem;
   padding: 4px 8px 4px 8px;
   text-align: center;
   width: 200px;
   border-radius: 10px 10px 10px 0;
   border-style: solid;
   border-width: 2px;
-  border-color: #2c83fb;
-  color: #2c83fb;
+  border-color: var(--cor-blue-400);
+  color: var(--cor-blue-400);
 }
 
 .text {
-  color: #213644;
+  color: var(--cor-blue-900);
   font-size: 3rem;
   font-weight: 500;
   margin: 0;
@@ -37,7 +38,11 @@
 
 .text2 {
   font-size: 5rem;
-  background: -webkit-linear-gradient(45deg, #2c83fb, #1f76f0);
+  background: -webkit-linear-gradient(
+    45deg,
+    var(--cor-blue-400),
+    var(--cor-blue-500)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -49,6 +54,7 @@
 .text2::after {
   content: "";
   display: block;
+  object-fit: fill;
   width: 50px;
   height: 50px;
   position: absolute;
@@ -58,6 +64,44 @@
 }
 
 .text3 {
-  color: #213644;
+  color: var(--cor-blue-900);
   font: 1rem;
+}
+
+@media (max-width: 700px) {
+  .info {
+    font-size: 0.8rem;
+    padding: 2px;
+    width: 150px;
+  }
+
+  .text {
+    font-size: 1.5rem;
+  }
+  .text2 {
+    font-size: 3rem;
+  }
+
+  .text2::after {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    top: 0px;
+    right: -10px;
+  }
+  .text3 {
+    font-size: 0.8rem;
+    padding-right: 30px;
+    padding-left: 30px;
+    text-align: center;
+  }
+  .divider {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .text2 {
+    font-size: 2.5rem;
+  }
 }

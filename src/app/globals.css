@@ -1,0 +1,10 @@
+:root {
+  --cor-blue-100: #eff7ff;
+  --cor-blue-400: #2c83fb;
+  --cor-blue-500: #1f76f0;
+  --cor-blue-900: #213644;
+}
+
+body {
+  margin: 0;
+}

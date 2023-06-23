@@ -37,8 +37,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 OBS: o arquivo README, sera desenvolvido ao longo do projeto, afim de documentar com maior detalhe. A formatação do mesmo sera realizada ao final.
 
+Algumas variaveis de estilização foram configuradas no arquivo global.css.
+
 1. Instalei e configurei o EsLint juntamente com o prettier. O ESLint é uma ferramenta que ajuda a identificar erros e problemas no código, enquanto o Prettier é uma ferramenta que formata automaticamente o código para seguir um estilo consistente. Ambos são usados para melhorar a qualidade e a legibilidade do código.
 
 2. Configurei a font "Plus_Jakarta_Sans" a partir do Next.
 
 3. Criei o Header, contendo o logo da aplicação e inserio o RootLayout em Pages. Todos as Sections presente na landing page, serão componenets.
+
+4. criei o Home e apliquei esponsividade, mantando o design do projeto.
