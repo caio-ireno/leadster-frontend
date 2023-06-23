@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { HomePage } from "@/components/Home";
 
 import RootLayout from "./layout";
 import styles from "./page.module.css";
@@ -8,6 +9,7 @@ export default function Home() {
     <RootLayout>
       <main className={styles.main}>
         <Header />
+        <HomePage />
       </main>
     </RootLayout>
   );
