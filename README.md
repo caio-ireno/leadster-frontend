@@ -35,6 +35,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Meus passos para o desenvolvimento deste projeto
 
+OBS: o arquivo README, sera desenvolvido ao longo do projeto, afim de documentar com maior detalhe. A formatação do mesmo sera realizada ao final.
+
 1. Instalei e configurei o EsLint juntamente com o prettier. O ESLint é uma ferramenta que ajuda a identificar erros e problemas no código, enquanto o Prettier é uma ferramenta que formata automaticamente o código para seguir um estilo consistente. Ambos são usados para melhorar a qualidade e a legibilidade do código.
 
 2. Configurei a font "Plus_Jakarta_Sans" a partir do Next.
