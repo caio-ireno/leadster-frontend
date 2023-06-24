@@ -2,13 +2,13 @@ import { Api } from "./axios-confi";
 export interface CursoProps {
   id: number;
   tipo: string;
-  videos: {
+  curso: {
     id: number;
     nome: string;
     img: string;
     url: string;
     cursoId: number;
-  };
+  }[];
 }
 
 export interface ListaVideoProps {

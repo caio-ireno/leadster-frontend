@@ -4,7 +4,7 @@ export function HomePage() {
   return (
     <main className={styles.main}>
       <h3 className={styles.info}>Webinars exclusivos</h3>
-      <h2 className={styles.text}>Manos conversinha,</h2>
+      <h2 className={styles.text}>Menos conversinha,</h2>
       <h1 className={styles.text2}>Mais conversão</h1>
       <div className={styles.divider}></div>
       <p className={styles.text3}>

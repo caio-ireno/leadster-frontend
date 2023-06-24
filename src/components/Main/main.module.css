@@ -15,7 +15,8 @@
   align-items: center;
 }
 
-.button {
+.button,
+.displayButton select {
   min-width: 100px;
   display: flex;
   flex-direction: row;
@@ -32,6 +33,35 @@
 }
 
 .button p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin: 5px;
+}
+
+.Ordenar {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.Ordenar p {
+  font-size: 0.8rem;
+  color: var(--cor-blue-900);
+  font-weight: bold;
+}
+
+.Ordenar select {
+  min-width: 100px;
+  height: 30px;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: var(--cor-blue-900);
+  background-color: white;
 }

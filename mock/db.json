@@ -3,7 +3,7 @@
     {
       "id": 1,
       "tipo": "Agência",
-      "cursos": [
+      "curso": [
         {
           "id": 10,
           "nome": "Curso 1 Agência",

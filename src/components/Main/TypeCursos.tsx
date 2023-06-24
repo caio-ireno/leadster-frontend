@@ -1,12 +1,16 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import { ApiCurso, CursoProps } from "@/api/ApiCurso";
 
+import thumbnail from "../../../public/thumbnail.png";
 import styles from "./main.module.css";
 
 export default function TypeCursos() {
   const [data, setData] = useState<CursoProps[]>([]);
+  const [buttonData, setButtonData] = useState(0);
+  const [dataVideo, setDataVideo] = useState<CursoProps>();
 
   useEffect(() => {
     ApiCurso.getCursos()
@@ -23,20 +27,50 @@ export default function TypeCursos() {
       });
   }, []);
 
-  console.log(data);
+  useEffect(() => {
+    data.forEach(value => {
+      if (value.id === buttonData) {
+        setDataVideo(value);
+      }
+    });
+  }, [data, buttonData]);
 
+  console.log(dataVideo?.curso);
   return (
     <main>
       <div className={styles.displayButton}>
         {data.map(r => {
           return (
-            <button key={r.id} className={styles.button}>
+            <button
+              key={r.id}
+              className={styles.button}
+              onClick={() => setButtonData(r.id)}
+            >
               <p>{r.tipo}</p>
             </button>
           );
         })}
+        <div className={styles.Ordenar}>
+          <p>Ordenar por</p>
+          <select name="Ordenar" id="Ordenar">
+            <option value="Data">Data de Publicação</option>
+            <option value="Acessos">Acessos</option>
+            <option value="Tamanho">Tamanho</option>
+            <option value="Conteúdo">Conteúdo</option>
+          </select>
+        </div>
       </div>
-      <div className="divider" />
+
+      <div className={styles.card}>
+        {dataVideo?.curso.map(video => {
+          return (
+            <div key={video.id}>
+              <Image src={thumbnail} alt="img" />
+              <h1>{video.nome}</h1>
+            </div>
+          );
+        })}
+      </div>
     </main>
   );
 }
