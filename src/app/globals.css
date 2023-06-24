@@ -8,3 +8,11 @@
 body {
   margin: 0;
 }
+
+.divider {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 600px;
+  height: 1px;
+  background-color: #d0d0d0;
+}

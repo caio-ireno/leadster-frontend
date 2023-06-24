@@ -1,0 +1,37 @@
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.displayButton {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  min-width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  border-style: solid;
+  border-color: var(--cor-blue-900);
+  background-color: white;
+}
+.button:hover {
+  border-color: var(--cor-blue-500);
+  color: var(--cor-blue-500);
+}
+
+.button p {
+  font-size: 1rem;
+  margin: 5px;
+}
