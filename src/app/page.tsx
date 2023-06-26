@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { HomePage } from "@/components/Home";
+import { Info } from "@/components/Info";
 import { MainPage } from "@/components/Main";
 
 import RootLayout from "./layout";
@@ -12,6 +13,7 @@ export default function Home() {
         <Header />
         <HomePage />
         <MainPage />
+        <Info />
       </main>
     </RootLayout>
   );
