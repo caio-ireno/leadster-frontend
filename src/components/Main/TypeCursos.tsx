@@ -9,7 +9,7 @@ import styles from "./main.module.css";
 
 export default function TypeCursos() {
   const [data, setData] = useState<CursoProps[]>([]);
-  const [buttonData, setButtonData] = useState(0);
+  const [buttonData, setButtonData] = useState(1);
   const [dataVideo, setDataVideo] = useState<CursoProps>();
 
   useEffect(() => {
@@ -35,7 +35,9 @@ export default function TypeCursos() {
     });
   }, [data, buttonData]);
 
-  console.log(dataVideo?.curso);
+  console.log(dataVideo);
+
+  //console.log(dataVideo?.curso);
   return (
     <main>
       <div className={styles.displayButton}>
@@ -61,15 +63,19 @@ export default function TypeCursos() {
         </div>
       </div>
 
-      <div className={styles.card}>
+      <div className={styles.cardContainer}>
         {dataVideo?.curso.map(video => {
           return (
-            <div key={video.id}>
+            <div className={styles.card} key={video.id}>
               <Image src={thumbnail} alt="img" />
               <h1>{video.nome}</h1>
             </div>
           );
         })}
+      </div>
+
+      <div>
+        <h1>Pagina</h1>
       </div>
     </main>
   );

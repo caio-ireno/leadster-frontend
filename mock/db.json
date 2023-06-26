@@ -44,7 +44,7 @@
     {
       "id": 2,
       "tipo": "Chatbot",
-      "cursos": [
+      "curso": [
         {
           "id": 20,
           "nome": "Curso 1 Chatbot",
@@ -85,7 +85,7 @@
     {
       "id": 3,
       "tipo": "Marketing Digital",
-      "cursos": [
+      "curso": [
         {
           "id": 30,
           "nome": "Curso 1 Marketing Digital",
@@ -126,7 +126,7 @@
     {
       "id": 4,
       "tipo": "Geração de Leads",
-      "cursos": [
+      "curso": [
         {
           "id": 40,
           "nome": "Curso 1 Geração de Leads",
@@ -167,7 +167,7 @@
     {
       "id": 5,
       "tipo": "Mídia Paga",
-      "cursos": [
+      "curso": [
         {
           "id": 50,
           "nome": "Curso 1 Mídia Paga",
