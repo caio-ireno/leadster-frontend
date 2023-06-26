@@ -1,3 +1,4 @@
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { HomePage } from "@/components/Home";
 import { Info } from "@/components/Info";
@@ -14,6 +15,7 @@ export default function Home() {
         <HomePage />
         <MainPage />
         <Info />
+        <Footer />
       </main>
     </RootLayout>
   );

@@ -17,3 +17,16 @@ body {
   height: 1px;
   background-color: #d0d0d0;
 }
+
+h3 {
+  color: var(--cor-blue-900);
+  font-weight: normal;
+}
+h1 {
+  color: var(--cor-blue-900);
+  font-weight: normal;
+}
+
+p {
+  color: var(--cor-blue-900);
+}
