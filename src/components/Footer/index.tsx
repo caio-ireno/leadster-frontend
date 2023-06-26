@@ -1,8 +1,8 @@
 import Image from "next/image";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 import logo from "../../../public/logo.png";
 import styles from "./footer.module.css";
-
 export function Footer() {
   return (
     <div className={styles.main}>
@@ -11,8 +11,8 @@ export function Footer() {
         <p>Transformando visitantes em clientes</p>
       </div>
       <div className={styles.menu}>
-        <div>
-          <h2>Links Principais</h2>
+        <div className={styles.subMenu}>
+          <h3>Links Principais</h3>
           <ul>
             <li>Home</li>
             <li>Ferramenta</li>
@@ -20,8 +20,9 @@ export function Footer() {
             <li>Contato</li>
           </ul>
         </div>
-        <div>
-          <h2>Cases</h2>
+
+        <div className={styles.subMenu}>
+          <h3>Cases</h3>
           <ul>
             <li>Geração de Leads B2B</li>
             <li>Geração de Leads em Sofware</li>
@@ -29,8 +30,9 @@ export function Footer() {
             <li>Cases de Sucesso</li>
           </ul>
         </div>
-        <div>
-          <h2>Materiais</h2>
+
+        <div className={styles.subMenu}>
+          <h3>Materiais</h3>
           <ul>
             <li>Blog</li>
             <li>Parceria com Agências</li>
@@ -39,23 +41,35 @@ export function Footer() {
           </ul>
         </div>
 
-        <div>
-          <h2>Siga a Leadster</h2>
-          <div>logos</div>
+        <div className={styles.subMenu}>
+          <h3>Siga a Leadster</h3>
           <div>
-            <h3>Email:</h3>
-            <a>contato@leadster.com.br</a>
+            <FaLinkedinIn className={styles.logo} />
+            <FaFacebookF className={styles.logo} />
+            <FaInstagram className={styles.logo} />
           </div>
           <div>
-            <h3>Telefone:</h3>
-            <a>(42) 98828-9851</a>
+            <p>
+              E-mail:{" "}
+              <a href="mailto:contato@leadster.com.br">
+                contato@leadster.com.br
+              </a>
+            </p>
+          </div>
+          <div>
+            <p>
+              Telefone: <a href="tel:+5542988289851">(42) 98828-9851</a>
+            </p>
           </div>
         </div>
       </div>
 
       <div className={styles.divider} />
-      <div>
-        <h3>Copyrghit 2015 - 2022 Todos os direitos reservados | Leadster</h3>
+      <div className={styles.copy}>
+        <h3>
+          Copyrghit © 2015 - 2022 Todos os direitos reservados |{" "}
+          <span className={styles.leadsterBlue}>Leadster</span>
+        </h3>
         <h3>
           Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010-000 |
           TERMOS DE USO

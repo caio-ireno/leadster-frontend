@@ -3,7 +3,9 @@
   --cor-blue-400: #2c83fb;
   --cor-blue-500: #1f76f0;
   --cor-blue-900: #213644;
+  --cor-gray-100: #f0f0f0;
   --cor-gray-300: #d0d0d0;
+  --cor-gray-400: #9ca9b6;
 }
 
 body {
@@ -29,4 +31,9 @@ h1 {
 
 p {
   color: var(--cor-blue-900);
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
