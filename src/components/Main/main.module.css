@@ -9,6 +9,7 @@
 .displayButton {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   flex-direction: row;
   justify-content: center;
@@ -104,6 +105,10 @@
   align-items: center;
   justify-content: center;
   border-radius: 1px;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 .paginateActive {
@@ -119,5 +124,15 @@
   .card:nth-child(3n + 2),
   .card:nth-child(3n + 3) {
     grid-column: auto;
+  }
+}
+
+@media (max-width: 1300px) {
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card {
+    padding: 0;
   }
 }

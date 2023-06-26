@@ -39,10 +39,22 @@ OBS: o arquivo README, sera desenvolvido ao longo do projeto, afim de documentar
 
 Algumas variaveis de estilização foram configuradas no arquivo global.css.
 
+A aplicação foi dividida em Header, Home, Main, Info e Footer.
+
 1. Instalei e configurei o EsLint juntamente com o prettier. O ESLint é uma ferramenta que ajuda a identificar erros e problemas no código, enquanto o Prettier é uma ferramenta que formata automaticamente o código para seguir um estilo consistente. Ambos são usados para melhorar a qualidade e a legibilidade do código.
 
 2. Configurei a font "Plus_Jakarta_Sans" a partir do Next.
 
-3. Criei o Header, contendo o logo da aplicação e inserio o RootLayout em Pages. Todos as Sections presente na landing page, serão componenets.
+Em seguida comecei a criar o conteudo da pagina.
 
-4. criei o Home e apliquei esponsividade, mantando o design do projeto.
+A pagina Header, foi simples, apenas adicionei o logo da empresa centralizado. O tamnho não esta sendo alterado, mesmo para telas menos, afim de proporcionar maior destaque.
+
+Em Home, criei uma tag <main> para centralizar o conteudo. O detalhe em "conversão" foi inserido como um "after".
+
+Em main, onde é renderizado os videos (cursos) criei um Mock, usando Json-Server, afim de simular um backend.
+
+Todo o conteudo esta sendo tratato em "typeCursos". basicamente, fazemos uma requisção a API dentro de um useEffect. Alem disso, tambem é feito uma logica para definir qual o tipo de curso. Foi utilizado tambem React Paginte.
+
+ou seja, como estamos simulando um API, temos a logica bem estruturada, separada por tipos de curso e paginação (6 por pagina). è possivel inserir 100 cursos e a pagina ira se comportar perfeitamente.
+
+Caso seja necessarios, implementar futuras paginas e usar esses dados para renderização é possivel criar um Context.
