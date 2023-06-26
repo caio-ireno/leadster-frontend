@@ -184,22 +184,42 @@
 
 /* Estilos para o conteúdo do modal */
 .modalContent {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
   background-color: #fff;
-  padding: 20px;
   border-radius: 8px;
   max-width: 400px;
   max-height: 80%;
   overflow-y: auto;
-  text-align: center;
   border-top: 4px solid var(--cor-blue-500);
 }
 
 .modalContent h3 {
+  width: 60%;
   color: var(--cor-blue-500);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 30px;
 }
-
+.closeIcon {
+  position: relative;
+  top: 10px;
+  right: -180px;
+  width: 25px;
+  height: 25px;
+  color: var(--cor-gray-400);
+  cursor: pointer;
+}
 .modalContent span {
   color: var(--cor-blue-900);
+}
+
+.modalContent img {
+  width: 100%;
+  height: auto;
 }
 /* Estilos para o botão de fechar do modal */
 .modalContent button {

@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 import ReactPaginate from "react-paginate";
 
 import { ApiCurso, CursoProps, ListaVideoProps } from "@/api/ApiCurso";
@@ -120,11 +121,15 @@ export default function TypeCursos() {
       {isOpen && (
         <div className={styles.modal}>
           <div className={styles.modalContent}>
+            <AiOutlineCloseCircle
+              className={styles.closeIcon}
+              onClick={closeModal}
+            />
             <h3>
               Webinar <span>{curso?.nome}</span>
             </h3>
             <Image src={video} alt="video " />
-            <button onClick={closeModal}>Fechar</button>
+            <button>Fechar</button>
             {/* Conteúdo adicional do modal */}
           </div>
         </div>
