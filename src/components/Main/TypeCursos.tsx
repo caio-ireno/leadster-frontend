@@ -3,17 +3,30 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 
-import { ApiCurso, CursoProps } from "@/api/ApiCurso";
+import { ApiCurso, CursoProps, ListaVideoProps } from "@/api/ApiCurso";
 
 import thumbnail from "../../../public/thumbnail.png";
+import video from "../../../public/video_capa.jpg";
 import styles from "./main.module.css";
 
 export default function TypeCursos() {
   const [data, setData] = useState<CursoProps[]>([]);
   const [buttonData, setButtonData] = useState(1);
+  const [curso, setCurso] = useState<ListaVideoProps>();
   const [dataVideo, setDataVideo] = useState<CursoProps>();
   const itemsPerPage = 6; // Define o número de itens por página
   const [itemOffset, setItemOffset] = useState(0); // Estado para controlar o deslocamento (offset) dos itens
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Função para abrir o modal
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  // Função para fechar o modal
+  const closeModal = () => {
+    setIsOpen(false);
+  };
 
   useEffect(() => {
     ApiCurso.getCursos()
@@ -83,7 +96,14 @@ export default function TypeCursos() {
       <div className={styles.cardContainer}>
         {currentPageItems?.map(video => {
           return (
-            <div className={styles.card} key={video.id}>
+            <div
+              onClick={() => {
+                openModal();
+                setCurso(video);
+              }}
+              className={styles.card}
+              key={video.id}
+            >
               <Image src={thumbnail} alt="img" />
               <h1>{video.nome}</h1>
             </div>
@@ -96,6 +116,19 @@ export default function TypeCursos() {
         containerClassName={styles.paginate}
         activeClassName={styles.paginateActive}
       />
+
+      {isOpen && (
+        <div className={styles.modal}>
+          <div className={styles.modalContent}>
+            <h3>
+              Webinar <span>{curso?.nome}</span>
+            </h3>
+            <Image src={video} alt="video " />
+            <button onClick={closeModal}>Fechar</button>
+            {/* Conteúdo adicional do modal */}
+          </div>
+        </div>
+      )}
     </main>
   );
 }

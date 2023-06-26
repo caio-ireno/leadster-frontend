@@ -84,6 +84,7 @@
   border-radius: 30px;
   border: 1px solid;
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .card h1 {
@@ -167,3 +168,48 @@
     font-size: 0.8rem;
   }
 }
+
+/* Estilos para o modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para o conteúdo do modal */
+.modalContent {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  max-height: 80%;
+  overflow-y: auto;
+  text-align: center;
+  border-top: 4px solid var(--cor-blue-500);
+}
+
+.modalContent h3 {
+  color: var(--cor-blue-500);
+}
+
+.modalContent span {
+  color: var(--cor-blue-900);
+}
+/* Estilos para o botão de fechar do modal */
+.modalContent button {
+  background-color: #ccc;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estilos para o conteúdo adicional do modal */
+/* Adicione os estilos desejados para o conteúdo adicional do modal */
