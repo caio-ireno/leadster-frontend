@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { AiOutlineCloseCircle } from "react-icons/ai";
+import { AiOutlineCloseCircle, AiOutlineCloudDownload } from "react-icons/ai";
 import ReactPaginate from "react-paginate";
 
 import { ApiCurso, CursoProps, ListaVideoProps } from "@/api/ApiCurso";
@@ -129,7 +129,25 @@ export default function TypeCursos() {
               Webinar <span>{curso?.nome}</span>
             </h3>
             <Image src={video} alt="video " />
-            <button>Fechar</button>
+            <div className={styles.modalInfo}>
+              <h1>Descrição</h1>
+              <p>{curso?.descrição}</p>
+              <h1>Downloads</h1>
+              <div className={styles.modalDownloads}>
+                <button className={styles.btGreen}>
+                  <AiOutlineCloudDownload />
+                  Spreadsheet.xls
+                </button>
+                <button className={styles.btBlue}>
+                  <AiOutlineCloudDownload />
+                  Document.doc
+                </button>
+                <button className={styles.btYellow}>
+                  <AiOutlineCloudDownload />
+                  Presentation.ppt
+                </button>
+              </div>
+            </div>
             {/* Conteúdo adicional do modal */}
           </div>
         </div>

@@ -5,6 +5,7 @@ export interface CursoProps {
   curso: {
     id: number;
     nome: string;
+    descrição: string;
     img: string;
     url: string;
     cursoId: number;
@@ -14,6 +15,7 @@ export interface CursoProps {
 export interface ListaVideoProps {
   id: number;
   nome: string;
+  descrição: string;
   img: string;
   url: string;
   cursoId: number;
