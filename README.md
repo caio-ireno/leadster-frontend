@@ -4,12 +4,6 @@
 npm run dev
 ```
 
-## Rodar o servidor com Json-Server.
-
-```bash
-npm run mock
-```
-
 ## Meus passos para o desenvolvimento deste projeto
 
 OBS: O arquivo README, sera desenvolvido ao longo do projeto, afim de documentar com maior detalhe. A formatação do mesmo sera realizada ao final. Alem disso, todos os commits de desenvolvimento são feitos na branch "feat" após validação é feito um merge para "main". è possivel criar outras ramificações, de acordo com a equipe e etapas do projeto.
