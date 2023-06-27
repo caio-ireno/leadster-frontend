@@ -121,7 +121,7 @@ export default function TypeCursos() {
       {isOpen && (
         <div className={styles.modal}>
           <div className={styles.modalContent}>
-            <div>
+            <div className={styles.iconContainer}>
               <AiOutlineCloseCircle
                 className={styles.closeIcon}
                 onClick={closeModal}

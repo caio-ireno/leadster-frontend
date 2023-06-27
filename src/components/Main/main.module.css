@@ -169,6 +169,12 @@
   margin-bottom: 30px;
   text-align: center;
 }
+.iconContainer {
+  width: 90%;
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+}
 .closeIcon {
   width: 25px;
   height: 25px;
@@ -284,6 +290,11 @@
   .closeIcon {
     width: 25px;
     height: 25px;
+  }
+  .iconContainer {
+    width: 90%;
+    display: flex;
+    justify-content: end;
   }
   .modalInfo {
     width: 90%;
