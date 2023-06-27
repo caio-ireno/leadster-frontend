@@ -12,7 +12,7 @@ npm run mock
 
 ## Meus passos para o desenvolvimento deste projeto
 
-OBS: O arquivo README, sera desenvolvido ao longo do projeto, afim de documentar com maior detalhe. A formatação do mesmo sera realizada ao final.
+OBS: O arquivo README, sera desenvolvido ao longo do projeto, afim de documentar com maior detalhe. A formatação do mesmo sera realizada ao final. Alem disso, todos os commits de desenvolvimento são feitos na branch "feat" após validação é feito um merge para "main". è possivel criar outras ramificações, de acordo com a equipe e etapas do projeto.
 
 Algumas variaveis de estilização foram configuradas no arquivo global.css.
 
@@ -26,7 +26,7 @@ Em seguida comecei a criar o conteudo da pagina.
 
 A pagina Header, Home, Info e Footer foram simples, apenas adicionei as imagens e estruturas necessarias, respeitando o layout. Todos os components são responsivos.
 
-Ja em main, onde é renderizado os videos (cursos) criei um Mock, usando Json-Server, afim de simular um backend.
+Ja em main, onde é renderizado os videos (cursos) criei um Mock, usando Json-Server, para testar durante o desenvolvimento. Após a finalização, foi feito o deploy de um pequeno servidor na vercel - https://faker-server.vercel.app
 
 Primeiramente, são importados os módulos necessários, como "next/image" para exibir imagens, "react" para utilizar os hooks de efeito e estado, e alguns ícones do pacote "react-icons" para uso posterior. Também é importado o módulo "ApiCurso" para obter os dados dos cursos.
 

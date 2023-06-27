@@ -3,7 +3,7 @@ import axios from "axios";
 import { errorInterceptor, responseInterceptor } from "./interceptors";
 
 const Api = axios.create({
-  baseURL: "http://localhost:3333",
+  baseURL: "https://faker-server.vercel.app",
 });
 
 Api.interceptors.response.use(

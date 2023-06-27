@@ -174,7 +174,7 @@
 .iconContainer {
   width: 90%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-top: 10px;
 }
 .closeIcon {
@@ -296,7 +296,7 @@
   .iconContainer {
     width: 90%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
   }
   .modalInfo {
     width: 90%;
