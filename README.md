@@ -26,7 +26,7 @@ Em seguida comecei a criar o conteudo da pagina.
 
 A pagina Header, Home, Info e Footer foram simples, apenas adicionei as imagens e estruturas necessarias, respeitando o layout. Todos os components são responsivos.
 
-Ja em main, onde é renderizado os videos (cursos) criei um Mock, usando Json-Server, afim de simular um backend.
+Ja em main, onde é renderizado os videos (cursos) criei um Mock, usando Json-Server, para testar durante o desenvolvimento. Após a finalização, foi feito o deploy de um pequeno servidor na vercel - https://faker-server.vercel.app
 
 Primeiramente, são importados os módulos necessários, como "next/image" para exibir imagens, "react" para utilizar os hooks de efeito e estado, e alguns ícones do pacote "react-icons" para uso posterior. Também é importado o módulo "ApiCurso" para obter os dados dos cursos.
 
