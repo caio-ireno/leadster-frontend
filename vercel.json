@@ -18,8 +18,5 @@
   ],
   "env": {
     "DB_FILE": "./mock/db.json"
-  },
-  "dev": {
-    "ignore": ["mock/**"]
   }
 }
