@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "start:json-server": "json-server -w -p 3333 $DB_FILE",
+    "start:json-server": "json-server -w -p 3333 ./mock/db.json",
     "lint": "next lint",
     "mock": "json-server -w -p 3333 ./mock/db.json"
   },
