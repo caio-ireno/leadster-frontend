@@ -2,15 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/node"
+      "src": "src",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["db.json"]
+      }
     }
   ],
   "routes": [
-    {
-      "src": "/api/.*",
-      "dest": "http://localhost:3333"
-    },
     {
       "src": "/(.*)",
       "dest": "/"
