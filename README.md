@@ -35,7 +35,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Meus passos para o desenvolvimento deste projeto
 
-OBS: o arquivo README, sera desenvolvido ao longo do projeto, afim de documentar com maior detalhe. A formatação do mesmo sera realizada ao final.
+OBS: O arquivo README, sera desenvolvido ao longo do projeto, afim de documentar com maior detalhe. A formatação do mesmo sera realizada ao final.
 
 Algumas variaveis de estilização foram configuradas no arquivo global.css.
 
