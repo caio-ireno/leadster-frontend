@@ -41,20 +41,26 @@ Algumas variaveis de estilização foram configuradas no arquivo global.css.
 
 A aplicação foi dividida em Header, Home, Main, Info e Footer.
 
-1. Instalei e configurei o EsLint juntamente com o prettier. O ESLint é uma ferramenta que ajuda a identificar erros e problemas no código, enquanto o Prettier é uma ferramenta que formata automaticamente o código para seguir um estilo consistente. Ambos são usados para melhorar a qualidade e a legibilidade do código.
+Primeiramente, instalei e configurei o ESLint juntamente com o Prettier, utilizando os plugins "react", "react-hooks", "@typescript-eslint", "unused-imports" e "simple-import-sort". O ESLint é uma ferramenta que ajuda a identificar erros e problemas no código, enquanto o Prettier é uma ferramenta que formata automaticamente o código para seguir um estilo consistente. Esses plugins adicionais são utilizados para fornecer regras específicas para o desenvolvimento com o React, verificar e garantir boas práticas no uso dos hooks, lidar com o TypeScript, identificar imports não utilizados e realizar a ordenação simples dos imports. Com a combinação dessas ferramentas e plugins, é possível melhorar significativamente a qualidade e a legibilidade do código.
 
-2. Configurei a font "Plus_Jakarta_Sans" a partir do Next.
+A fonte "Plus_Jakarta_Sans" foi configurada a partir do Next.
 
 Em seguida comecei a criar o conteudo da pagina.
 
-A pagina Header, foi simples, apenas adicionei o logo da empresa centralizado. O tamnho não esta sendo alterado, mesmo para telas menos, afim de proporcionar maior destaque.
+A pagina Header, Home, Info e Footer foram simples, apenas adicionei as imagens e estruturas necessarias, respeitando o layout. Todos os components são responsivos.
 
-Em Home, criei uma tag <main> para centralizar o conteudo. O detalhe em "conversão" foi inserido como um "after".
+Ja em main, onde é renderizado os videos (cursos) criei um Mock, usando Json-Server, afim de simular um backend.
 
-Em main, onde é renderizado os videos (cursos) criei um Mock, usando Json-Server, afim de simular um backend.
+Primeiramente, são importados os módulos necessários, como "next/image" para exibir imagens, "react" para utilizar os hooks de efeito e estado, e alguns ícones do pacote "react-icons" para uso posterior. Também é importado o módulo "ApiCurso" para obter os dados dos cursos.
 
-Todo o conteudo esta sendo tratato em "typeCursos". basicamente, fazemos uma requisção a API dentro de um useEffect. Alem disso, tambem é feito uma logica para definir qual o tipo de curso. Foi utilizado tambem React Paginte.
+Em seguida, é definida a função do componente principal chamado "TypeCursos". Dentro dessa função, são declarados os estados utilizados pelo componente, como "data" para armazenar os dados dos cursos, "buttonData" para controlar o botão selecionado, "curso" para armazenar os detalhes do curso selecionado, "dataVideo" para armazenar os dados de vídeo do curso selecionado, e "isOpen" para controlar a abertura e fechamento de um modal.
 
-ou seja, como estamos simulando um API, temos a logica bem estruturada, separada por tipos de curso e paginação (6 por pagina). è possivel inserir 100 cursos e a pagina ira se comportar perfeitamente.
+O componente também define a quantidade de itens por página e o deslocamento dos itens. Há duas funções, "openModal" e "closeModal", para abrir e fechar o modal, respectivamente.
 
-Caso seja necessarios, implementar futuras paginas e usar esses dados para renderização é possivel criar um Context.
+Em seguida, são utilizados os hooks "useEffect" para buscar os cursos da API quando o componente é montado, e "useEffect" para atualizar os dados do vídeo quando o botão selecionado é alterado.
+
+O código também calcula o número total de páginas com base na quantidade de cursos e itens por página. Em seguida, há uma função "handlePageChange" para atualizar o deslocamento dos itens ao mudar de página. Além disso, são selecionados os itens da página atual com base no deslocamento e na quantidade de itens por página.
+
+No retorno do componente, há um contêiner principal "main" que exibe os botões dos cursos e um seletor de ordenação. Em seguida, há um contêiner "cardContainer" que exibe os cartões dos cursos, onde cada cartão contém uma imagem em miniatura e o nome do curso. Esses cartões são clicáveis e abrem o modal com mais informações quando clicados.
+
+Após os cartões, é utilizado o componente "ReactPaginate" para exibir a paginação dos cursos. O modal é exibido quando a variável "isOpen" é verdadeira e exibe informações detalhadas do curso, como o nome, a imagem do vídeo, a descrição e os botões de download para arquivos relacionados ao curso.
