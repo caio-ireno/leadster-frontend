@@ -18,6 +18,7 @@
 
 .button,
 .displayButton select {
+  cursor: pointer;
   min-width: 100px;
   display: flex;
   flex-direction: row;
@@ -124,6 +125,7 @@
   padding: 0;
   margin-top: 10px;
   margin-bottom: 50px;
+  cursor: pointer;
 }
 
 .paginateActive {
