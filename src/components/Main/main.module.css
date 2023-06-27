@@ -134,41 +134,6 @@
   border-color: var(--cor-blue-500);
 }
 
-@media (max-width: 768px) {
-  .card:nth-child(3n + 1),
-  .card:nth-child(3n + 2),
-  .card:nth-child(3n + 3) {
-    grid-column: auto;
-  }
-
-  .main {
-    margin-top: 50px;
-  }
-
-  .card img {
-    width: 350px;
-    height: auto;
-  }
-}
-
-@media (max-width: 1300px) {
-  .cardContainer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-  .card {
-    padding: 0;
-    height: auto;
-  }
-
-  .card h1 {
-    font-size: 0.8rem;
-  }
-}
-
 /* Estilos para o modal */
 .modal {
   position: fixed;
@@ -184,7 +149,6 @@
 
 /* Estilos para o conteúdo do modal */
 .modalContent {
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -203,11 +167,9 @@
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 30px;
+  text-align: center;
 }
 .closeIcon {
-  position: relative;
-  top: 10px;
-  right: -180px;
   width: 25px;
   height: 25px;
   color: var(--cor-gray-400);
@@ -218,11 +180,12 @@
 }
 
 .modalContent img {
+  object-fit: cover;
   width: 100%;
   height: auto;
 }
 
-.modalContent h1 {
+.modalInfo h1 {
   border-bottom: 1px solid var(--cor-gray-300);
   width: 100%;
   font-size: 0.7rem;
@@ -234,13 +197,15 @@
   font-size: 0.7rem;
 }
 .modalInfo {
-  padding: 15px;
+  width: 90%;
+  margin-bottom: 10px;
 }
 /* Estilos para o botão de fechar do modal */
 
 .modalDownloads {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-around;
 }
@@ -289,4 +254,60 @@
 .btYellow {
   color: #e8d88d;
   background-color: #fdf6ce;
+}
+
+@media (max-width: 768px) {
+  .card:nth-child(3n + 1),
+  .card:nth-child(3n + 2),
+  .card:nth-child(3n + 3) {
+    grid-column: auto;
+  }
+
+  .main {
+    margin-top: 50px;
+  }
+
+  .card img {
+    width: 350px;
+    height: auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .modalContent {
+    width: 80%;
+  }
+  .modalContent img {
+    width: 100%;
+    height: auto;
+  }
+  .closeIcon {
+    width: 25px;
+    height: 25px;
+  }
+  .modalInfo {
+    width: 90%;
+  }
+
+  .modalDownloads {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .card {
+    padding: 0;
+    height: auto;
+  }
+
+  .card h1 {
+    font-size: 0.8rem;
+  }
 }

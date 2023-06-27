@@ -121,10 +121,12 @@ export default function TypeCursos() {
       {isOpen && (
         <div className={styles.modal}>
           <div className={styles.modalContent}>
-            <AiOutlineCloseCircle
-              className={styles.closeIcon}
-              onClick={closeModal}
-            />
+            <div>
+              <AiOutlineCloseCircle
+                className={styles.closeIcon}
+                onClick={closeModal}
+              />
+            </div>
             <h3>
               Webinar <span>{curso?.nome}</span>
             </h3>
