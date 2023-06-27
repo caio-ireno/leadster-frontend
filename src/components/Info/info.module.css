@@ -1,0 +1,118 @@
+.main {
+  margin-top: 20px;
+  background-color: var(--cor-blue-100);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.divider {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--cor-gray-300);
+}
+.imgComparativo {
+  object-fit: contain;
+  width: 50%;
+  height: auto;
+}
+
+.demonstração {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+.imgSelog {
+  width: 150px;
+  height: 60px;
+}
+
+.demonstração button {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  height: 50px;
+  border-color: var(--cor-blue-500);
+  color: var(--cor-blue-100);
+  background-color: var(--cor-blue-500);
+  border-radius: 50px;
+  border-style: none;
+  padding: 0px 40px;
+  margin: 0;
+}
+
+.demonstração button:hover {
+  background-color: var(--cor-blue-400);
+}
+
+.noCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.noCard p {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1000px) {
+  .imgSelo {
+    width: 150px;
+    height: 60px;
+  }
+
+  .demonstração button {
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 0px 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .main h1 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .main h3 {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .demonstração {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .imgComparativo {
+    object-fit: fill;
+    width: 80%;
+    margin: 10px;
+  }
+  .divider {
+    width: 0s;
+  }
+  .noCard {
+    justify-content: center;
+    align-items: center;
+  }
+  .noCard p {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .noCard img:first-child {
+    display: none;
+  }
+}
